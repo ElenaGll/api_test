@@ -7,8 +7,8 @@ class Enviroment:
     PROD = "prod"
 
     URLS = {
-        DEV: "https://restful-booker.herokuapp.com",
-        PROD: "https://restful-booker.herokuapp.com"
+        DEV: "https://jsonplaceholder.typicode.com",
+        PROD: "https://jsonplaceholder.typicode.com"
     }
 
     def __init__(self):

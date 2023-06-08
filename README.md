@@ -1,3 +1,3 @@
-Automation API testing restful-booker
+Automation API testing
 
-API documentation for the playground API restful-booker http://restful-booker.herokuapp.com/apidoc/index.html
+API documentation https://jsonplaceholder.typicode.com/guide/

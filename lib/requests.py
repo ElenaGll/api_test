@@ -26,6 +26,11 @@ class Requests:
             return Requests._send(url, data, headers, cookies, 'DELETE')
 
     @staticmethod
+    def patch(url: str, data: dict = None, headers: dict = None, cookies: dict = None):
+        with allure.step(f"PATCH request to URL '{url}'"):
+            return Requests._send(url, data, headers, cookies, 'PATCH')
+
+    @staticmethod
     def _send(url: str, data: dict, headers: dict, cookies: dict, method: str):
         url = f"{ENV_OBJECT.get_base_url()}{url}"
 
@@ -44,6 +49,8 @@ class Requests:
             response = requests.put(url, data=data, headers=headers, cookies=cookies)
         elif method == "DELETE":
             response = requests.delete(url, data=data, headers=headers, cookies=cookies)
+        elif method == "PATCH":
+            response = requests.patch(url, data=data, headers=headers, cookies=cookies)
         else:
             raise Exception(f"Bad HTTP method '{method}' was received")
 
